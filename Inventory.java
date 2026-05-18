@@ -1,4 +1,6 @@
-public class Inventory {
+import java.util.List;
+import java.util.NoSuchElementException;
+public class Inventory<T extends Supplies>{
 
 	/*     STEP 3 
 	*        
@@ -8,6 +10,24 @@ public class Inventory {
 	*
 	*      Go to Transfer.java for STEP 4
 	*/
+
+	private T t;
+
+	public Inventory() {
+
+	}
+	
+	public Inventory(T t) {
+		this.t = t;
+	}
+
+	public void setObject(T t) {
+		this.t = t;
+	}
+
+	public T getObject() {
+		return t;
+	}
 
 	/*     STEP 5
 	*

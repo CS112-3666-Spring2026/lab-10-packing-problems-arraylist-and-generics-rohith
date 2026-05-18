@@ -99,6 +99,8 @@ public class Transfer {
       /* Use the newFoodItem here and enter it into our foodList.
       *  Print to make sure it was successful
       */
+      foodList.add(newFoodItem);
+      System.out.println(name + " successfully added to Food list.");
 
     } else if(listNumber == 2) { // Add to Parts list
 
@@ -114,6 +116,8 @@ public class Transfer {
       /* Use the newPartsItem here and enter it into our partsList.
       *  Print to make sure it was successful
       */
+      partsList.add(newPartsItem);
+      System.out.println(name + " successfully added to Parts list.");
 
     } else { // Add to Supplies list
 
@@ -127,7 +131,8 @@ public class Transfer {
       /* Use the newSuppliesItem here and enter it into our suppliesList.
       *  Print to make sure it was successful
       */
-
+      suppliesList.add(newSuppliesItem);
+      System.out.println(name + " successfully added to Supplies list.");
     }
   }
 
