@@ -172,16 +172,20 @@ public class Transfer {
 
       /* This is where you will use our generic method searchByName()
       *  and List method remove() for our foodList
-      */ 
-      System.out.println("Remove items for foodList not implemented yet."); 
+      */
+      int indexOfItem = foodInventory.searchByName(foodList, name);
+      System.out.println("Removing " + name + " at index " + indexOfItem); 
+      foodList.remove(indexOfItem);
 
 
     } else if(listNumber == 2) { // Parts
 
       /* This is where you will use our generic method searchByName()
       *  and List method remove() for our partsList
-      */  
-      System.out.println("Remove items for partsList not implemented yet."); 
+      */
+      int indexOfItem = partsInventory.searchByName(partsList, name);
+      System.out.println("Removing " + name + " at index " + indexOfItem); 
+      partsList.remove(indexOfItem);
 
 
     } else if(listNumber == 3) { // Supplies
@@ -189,8 +193,9 @@ public class Transfer {
       /* This is where you will use our generic method searchByName()
       *  and List method remove() for our suppliesList
       */
-      System.out.println("Remove items for suppliesList not implemented yet.");
-
+      int indexOfItem = suppliesInventory.searchByName(suppliesList, name);
+      System.out.println("Removing " + name + " at index " + indexOfItem); 
+      suppliesList.remove(indexOfItem);
     }
   }
 
@@ -225,24 +230,21 @@ public class Transfer {
       /* This is where you will use our generic method checkQty()
       *  for our foodList.
       */
-      System.out.println("Edit Quantity for foodList not implemented yet.");
-
+      Food foodTemp = foodInventory.checkQty(foodList, name, desiredQty);
 
     } else if(listNumber == 2) { // Parts
 
       /* This is where you will use our generic method checkQty()
       *  for our partsList.
       */
-      System.out.println("Edit Quantity for partsList not implemented yet.");
-
+      Parts partsTemp = partsInventory.checkQty(partsList, name, desiredQty);
 
     } else if(listNumber == 3) { // Supplies
 
       /* This is where you will use our generic method checkQty()
       *  for our suppliesList.
       */
-      System.out.println("Edit Quantity for suppliesList not implemented yet.");
-
+      Supplies suppliesTemp = suppliesInventory.checkQty(suppliesList, name, desiredQty);
     }
   }
 

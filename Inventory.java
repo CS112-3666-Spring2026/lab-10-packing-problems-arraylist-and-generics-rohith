@@ -77,4 +77,21 @@ public class Inventory<T extends Supplies>{
 	*      and return the object with the new quantity.
 	*/
 
+	public T checkQty(List<T> inputList, String name, int desiredQuantity) {
+		int indexOfItem = searchByName(inputList, name);
+
+		if (indexOfItem == -1) {
+			return null;
+		}
+
+		if (inputList.get(indexOfItem).getQuantity() != desiredQuantity) {
+			inputList.get(indexOfItem).setQuantity(desiredQuantity);
+			System.out.println("Quantity updated successfully to " + desiredQuantity + ".");
+			return inputList.get(indexOfItem);
+		} else {
+			System.out.println("The quantity for " + name + " already matches the desired quantity.");
+			return inputList.get(indexOfItem);
+		}
+	}
+
 }
