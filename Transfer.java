@@ -151,6 +151,9 @@ public class Transfer {
   /* STEP 4 -- Create our three Inventory objects here for each type
   *            Food/Parts/Supplies
   */
+  Inventory<Food> foodInventory = new Inventory<Food>();
+  Inventory<Parts> partsInventory = new Inventory<>();
+  Inventory<Supplies> suppliesInventory = new Inventory<>();
 
   public void removeItems(int listNumber) {
 

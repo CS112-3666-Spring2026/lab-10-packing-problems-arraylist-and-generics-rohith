@@ -41,6 +41,19 @@ public class Inventory<T extends Supplies>{
 	*      index. If no match is found, return -1. 
 	*/
 
+	public int searchByName(List<T> inputList, String name) {
+		name = name.trim();
+
+		for (T element : inputList) {
+			if (element.getName().equalsIgnoreCase(name)) {
+				return inputList.indexOf(element);
+			}
+		}
+		
+		System.out.println("Sorry! Could not find the item named: " + name);
+		return -1;
+	}
+
 
 	/*     STEP 7:
 	* 
